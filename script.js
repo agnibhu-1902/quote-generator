@@ -22,14 +22,13 @@ quoteBtn.addEventListener('click', () => {
     window.location.reload()
 })
 
+const generateImage = () => {
+    body.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("https://source.unsplash.com/random/?landscape,book,night,city,countryside,library")'
+}
 
 body.addEventListener('load', () => {
-    body.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("https://source.unsplash.com/random/?landscape,book,night,city,countryside,library,think")'
-})
-
-window.onload = () => {
     generateImage()
-}
+})
 
 tweetBtn.addEventListener('click', () => {
     window.open(`https://twitter.com/intent/tweet?text=${content} - ${author}`, '_blank')
