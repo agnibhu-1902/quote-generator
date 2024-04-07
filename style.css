@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+@keyframes animate-content {
+    from {
+        opacity: 0;
+        transform: translateY(-10%);
+    }
+    to {
+        opacity: 100%;
+        transform: translateY(0);
+    }
+}
+
+body {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("https://source.unsplash.com/random/?landscape,book,night,city,countryside,library");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+    width: 90vw;
+    margin: 0 auto;
+    background-position: center;
+    animation: animate-content 1s;
+}
+
+main {
+    font-family: "Lobster", cursive;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    margin-top: 2em;
+    margin-bottom: 5em;
+    opacity: 0;
+    animation: animate-content 1s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.quote-head h1 {
+    font-size: 4rem;
+}
+
+main hr {
+    width: 25%;
+    height: 0.1rem;
+    border-radius: 3px;
+    border: 1px solid #fff;
+    background-color: #fff;
+}
+
+.quote-body blockquote {
+    font-size: 3rem;
+}
+
+.quote-body blockquote::before {
+    content: open-quote;
+    font-size: larger;
+}
+
+.quote-body blockquote::after {
+    content: close-quote;
+    font-size: larger;
+}
+
+.quote-body span {
+    font-size: 2rem;
+}
+
+.quote-btn {
+    margin-top: 3em;
+}
+
+.quote-btn button {
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 25px;
+    width: 150px;
+    height: 50px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.5s;
+}
+
+.quote-btn button:hover {
+    opacity: 1;
+    transition: 0.5s;
+}
+
+.quote-btn button:first-child {
+    margin-right: 1em;
+}
+
+.quote-btn button:last-child img {
+    width: 1em;
+    margin-right: 0.5em;
+}
+
+@media (max-width: 767px) {
+    .quote-head h1 {
+        font-size: 3rem;
+    }
+    
+    .quote-body blockquote {
+        font-size: 2rem;
+    }
+
+    .quote-body span {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 359px) {
+    .quote-btn {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .quote-btn button:first-child {
+        margin-right: 0;
+        margin-bottom: 1em;
+    }
+}
