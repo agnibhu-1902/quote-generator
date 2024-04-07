@@ -90,6 +90,8 @@ main hr {
 .quote-btn button:hover, .quote-btn button:focus {
     opacity: 1;
     transition: 0.5s;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .quote-btn button:first-child {
