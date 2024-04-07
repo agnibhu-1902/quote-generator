@@ -1,5 +1,5 @@
 # quote-generator
-Generate and tweet random quotes from famous authors.
+Generate and tweet random quotes from famous personalities.
 
 ### Link
 
