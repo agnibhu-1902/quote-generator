@@ -24,7 +24,7 @@ body {
     width: 90vw;
     margin: 0 auto;
     background-position: center;
-    animation: animate-content 1s;
+    transition: background-image 1s ease-in-out;
 }
 
 main {
@@ -36,10 +36,18 @@ main {
     text-align: center;
     margin-top: 2em;
     margin-bottom: 5em;
+}
+
+.animate-reverse {
+    animation: animate-content 1s;
+    animation-direction: reverse;
+}
+
+.animate-forwards {
     opacity: 0;
     animation: animate-content 1s;
-    animation-delay: 1s;
-    animation-fill-mode: forwards;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards; 
 }
 
 .quote-head h1 {
@@ -85,6 +93,10 @@ main hr {
     cursor: pointer;
     opacity: 0.6;
     transition: opacity 0.5s;
+}
+
+.quote-btn button:disabled {
+    color: rgba(0, 0, 0, 0.7)
 }
 
 .quote-btn button:hover, .quote-btn button:focus {

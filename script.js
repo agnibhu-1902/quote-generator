@@ -11,23 +11,39 @@ const getQuote = async (url) => {
     document.querySelector('.quote-body span').innerText = author
 }
 
-getQuote(url);
+getQuote(url)
+setTimeout(() => {
+    main.className = ''
+}, 2000)
 
 const quoteBtn = document.querySelector('#new-quote')
 const tweetBtn = document.querySelector('#tweet')
 const body = document.querySelector('body')
 const main = document.querySelector('main')
+const button = document.querySelectorAll('button')
 
+let i = 0
 quoteBtn.addEventListener('click', () => {
-    window.location.reload()
-})
-
-const generateImage = () => {
-    body.style.backgroundImage = 'linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url("https://source.unsplash.com/random/?landscape,book,night,city,countryside,library")'
-}
-
-body.addEventListener('load', () => {
-    generateImage()
+    i += 1
+    fetch(`https://source.unsplash.com/random/?landscape,book,night,city,countryside,library&${i}`).then( data => {
+        body.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.6)), url(${data.url})`
+	})
+    main.className = 'animate-reverse'
+    setTimeout(() => {
+        getQuote(url)
+    }, 700)
+    setTimeout(() => {
+        main.className = 'animate-forwards'
+        button.forEach(element => {
+            element.disabled = true
+        })
+    }, 1000)
+    setTimeout(() => {
+        main.className = ''
+        button.forEach(element => {
+            element.disabled = false
+        })
+    }, 2000)
 })
 
 tweetBtn.addEventListener('click', () => {
