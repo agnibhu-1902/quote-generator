@@ -8,7 +8,7 @@ const getQuote = async (url) => {
     content = data.content
     author = data.author
     document.querySelector('.quote-body blockquote').innerText = content
-    document.querySelector('.quote-body span').innerText = author
+    document.querySelector('.quote-body span').innerHTML = author
 }
 
 getQuote(url)

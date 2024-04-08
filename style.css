@@ -2,7 +2,20 @@
     box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+@font-face {
+    font-family: Lobster;
+    src: url('fonts/Lobster-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: StyleScript;
+    src: url('fonts/StyleScript-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: Merriweather-Bold;
+    src: url('fonts/Merriweather-Bold.ttf') format('truetype');
+}
 
 @keyframes animate-content {
     from {
@@ -25,13 +38,10 @@ body {
     margin: 0 auto;
     background-position: center;
     transition: background-image 1s ease-in-out;
-    -webkit-transition: background-image 1s ease-in-out;
-    -moz-transition: background-image 1s ease-in-out;
-    -o-transition: background-image 1s ease-in-out;
 }
 
 main {
-    font-family: "Lobster", cursive;
+    font-family: Lobster;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -55,6 +65,7 @@ main {
 
 .quote-head h1 {
     font-size: 4rem;
+    font-family: Merriweather-Bold;
 }
 
 main hr {
@@ -80,11 +91,12 @@ main hr {
 }
 
 .quote-body span {
-    font-size: 2rem;
+    font-size: 3rem;
+    font-family: StyleScript;
 }
 
 .quote-btn {
-    margin-top: 3em;
+    margin-top: 2em;
 }
 
 .quote-btn button {
@@ -128,7 +140,7 @@ main hr {
     }
 
     .quote-body span {
-        font-size: 1.5rem;
+        font-size: 2rem;
     }
 }
 
