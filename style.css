@@ -93,6 +93,8 @@ main hr {
     cursor: pointer;
     opacity: 0.6;
     transition: opacity 0.5s;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .quote-btn button:disabled {
