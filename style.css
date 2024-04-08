@@ -25,6 +25,9 @@ body {
     margin: 0 auto;
     background-position: center;
     transition: background-image 1s ease-in-out;
+    -webkit-transition: background-image 1s ease-in-out;
+    -moz-transition: background-image 1s ease-in-out;
+    -o-transition: background-image 1s ease-in-out;
 }
 
 main {
