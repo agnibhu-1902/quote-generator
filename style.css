@@ -137,7 +137,7 @@ main hr {
     margin-right: 0.5em;
 }
 
-@media (max-width: 767px) {
+@media (max-width: 767px) and (orientation: portrait) {
     .quote-head h1 {
         font-size: 3rem;
     }
